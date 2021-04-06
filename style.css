@@ -23,6 +23,7 @@ html,body,#viewDiv{
 }
 .esri-popup__header-title {
   color: #f06ace;
+  font-size: 16px;
 }
 .esri-feature-fields__field-data{
   font-size: 15px  !important;

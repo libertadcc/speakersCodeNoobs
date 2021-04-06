@@ -1,7 +1,7 @@
 import Map from "https://js.arcgis.com/4.18/@arcgis/core/Map.js";
 import MapView from "https://js.arcgis.com/4.18/@arcgis/core/views/MapView.js";
 import FeatureLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/FeatureLayer.js";
-import {greenPony, purplePony} from './icons.js';
+import { greenPony, purplePony } from './icons.js';
 
 const map = new Map({
   basemap: "gray-vector"
@@ -31,7 +31,7 @@ const speakersLayer = new FeatureLayer({
   url: "https://services5.arcgis.com/hZQQbQb2B2y1Wd2F/ArcGIS/rest/services/SpeakersCodenoobsconf/FeatureServer/0",
   renderer: gasStationRenderer,
   popupTemplate: {
-    title: "<h6 style='color: green'><b>{Nombre}</b></h6>",
+    title: "<b>{Nombre}</b>",
     content: [
       {
         type:"media",
