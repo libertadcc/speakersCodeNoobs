@@ -54,3 +54,7 @@ const speakersLayer = new FeatureLayer({
 });
 
 map.add(speakersLayer);
+
+view.when(() => {
+  document.querySelector('.esri-attribution__powered-by a').innerHTML = `<a href="https://developers.arcgis.com/" target="_blank">ESRI</a>`;
+});
