@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css"> 
+    <title>Speakers CodeNoobs</title>
+    <style>
+      html,body,#viewDiv{
+        padding:0;
+        margin:0;
+        height:100%;
+        width:100%
+      }
+      .esri-feature-media {
+        display: flex !important;
+        justify-content: center !important;
+      }
+
+      .esri-feature-media__item {
+        margin-top: 0;
+      }
+
+      .esri-feature-media__item-container {
+        width: 150px !important;
+      }
+
+      .fa-twitter, .fa-comment {
+        font-size: 20px !important;
+        color: #81cae0;
+      }
+      .esri-popup__header-title {
+        color: #f06ace;
+      }
+      .esri-feature-fields__field-data{
+        font-size: 15px  !important;
+        /* color: #a3dd9b; */
+        color: #F8CB79;
+      }
+    </style>
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/dark/main.css"/>
+    <script src="https://js.arcgis.com/4.18/"></script>
+    <script type="module" src="index.js"></script>
+  </head>
+
+  <body>
+    <div id="viewDiv"></div>
+  </body>
+</html>
