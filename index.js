@@ -4,7 +4,7 @@ import FeatureLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/Feature
 import { greenPony, purplePony } from './icons.js';
 
 const map = new Map({
-  basemap: "gray-vector"
+  basemap: "dark-gray-vector"
   // basemap: "dark-gray-vector"
 });
 
