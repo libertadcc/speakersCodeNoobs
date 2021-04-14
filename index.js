@@ -1,11 +1,26 @@
 import Map from "https://js.arcgis.com/4.18/@arcgis/core/Map.js";
 import MapView from "https://js.arcgis.com/4.18/@arcgis/core/views/MapView.js";
 import FeatureLayer from "https://js.arcgis.com/4.18/@arcgis/core/layers/FeatureLayer.js";
+import VectorTileLayer from 'https://js.arcgis.com/4.18/@arcgis/core/layers/VectorTileLayer.js';
 import { greenPony, purplePony } from './icons.js';
+import esriConfig from 'https://js.arcgis.com/4.18/@arcgis/core/config.js'
+import Basemap from 'https://js.arcgis.com/4.18/@arcgis/core/Basemap.js'
+esriConfig.apiKey = "AAPK910bc52162d04535b4b2e399d655b842-B8-L-B-bSHMrLN2KVLmjffN-wrL_S3hXWvzpGoUceNidwHU5YxKxYF9dcKDp9xH";
+
+
+var vectorTileLayer = new VectorTileLayer({
+  portalItem: {
+    id: '0aab6b3168574427a25ed4b17e36b6c0'
+  }
+});
+
+const basemap = new Basemap({
+  baseLayers: [ vectorTileLayer ]
+});
+
 
 const map = new Map({
-  basemap: "dark-gray-vector"
-  // basemap: "dark-gray-vector"
+  basemap: basemap
 });
 
 const view = new MapView({
@@ -17,19 +32,19 @@ const view = new MapView({
 
 const hashtag = {
   type: "picture-marker",
-  url: purplePony,
+  url: greenPony,
   width: 40,
   height: 40
 };
 
-var gasStationRenderer = {
+var speakersRenderer = {
   type: "simple",
   symbol: hashtag
 };
 
 const speakersLayer = new FeatureLayer({
   url: "https://services5.arcgis.com/hZQQbQb2B2y1Wd2F/ArcGIS/rest/services/SpeakersCodenoobsconf/FeatureServer/0",
-  renderer: gasStationRenderer,
+  renderer: speakersRenderer,
   popupTemplate: {
     title: "<b>{Nombre}</b>",
     content: [
@@ -54,7 +69,9 @@ const speakersLayer = new FeatureLayer({
 });
 
 map.add(speakersLayer);
+// map.addMany([speakersLayer]);
 
 view.when(() => {
   document.querySelector('.esri-attribution__powered-by a').innerHTML = `<a href="https://developers.arcgis.com/" target="_blank">ESRI</a>`;
 });
+

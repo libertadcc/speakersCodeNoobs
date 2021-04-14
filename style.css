@@ -21,10 +21,12 @@ html,body,#viewDiv{
   font-size: 20px !important;
   color: #81cae0;
 }
+
 .esri-popup__header-title {
   color: #f06ace;
   font-size: 16px;
 }
+
 .esri-feature-fields__field-data{
   font-size: 15px  !important;
   /* color: #a3dd9b; */
@@ -33,4 +35,8 @@ html,body,#viewDiv{
 
 .esri-attribution__powered-by {
   font-size: 14px;
+}
+
+a, a:visited {
+  color: #a6e29c;
 }
