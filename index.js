@@ -10,7 +10,7 @@ esriConfig.apiKey = "AAPK910bc52162d04535b4b2e399d655b842-B8-L-B-bSHMrLN2KVLmjff
 
 var vectorTileLayer = new VectorTileLayer({
   portalItem: {
-    id: '0aab6b3168574427a25ed4b17e36b6c0'
+    id: 'cbbcb78eb4d94b62879e1384b67e0e08'
   }
 });
 
