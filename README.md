@@ -2,10 +2,6 @@
 ![Codenoobs logo](https://github.com/libertadcc/speakersCodeNoobs/blob/main/images/codenoobs.jpg)
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 994c9a7996a44795af59ab4c0acbcbdd5bf567d8
 [Live Demo](https://libertadcc.github.io/speakersCodeNoobs/)
 
 
