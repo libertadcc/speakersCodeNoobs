@@ -14,7 +14,7 @@ var vectorTileLayer = new VectorTileLayer({
 });
 
 const basemap = new Basemap({
-  baseLayers: [ vectorTileLayer ]
+  baseLayers: [vectorTileLayer]
 });
 
 const map = new Map({
@@ -39,30 +39,27 @@ var speakersRenderer = {
   type: "simple",
   symbol: hashtag
 };
+const prueba = 'https://twitter.com/conchaasensio/photo'
 
 const speakersLayer = new FeatureLayer({
-  url: "https://services5.arcgis.com/hZQQbQb2B2y1Wd2F/ArcGIS/rest/services/SpeakersCodenoobsconf/FeatureServer/0",
+  url: "https://services5.arcgis.com/hZQQbQb2B2y1Wd2F/arcgis/rest/services/SpeakersDeCodenoobsconf/FeatureServer",
   renderer: speakersRenderer,
   popupTemplate: {
     title: "<b>{Nombre}</b>",
     content: [
       {
-        type:"media",
-        mediaInfos: [{
-          value: {sourceURL: '{Foto}'}
-        }]
-      },{
-      type: "fields",
-      fieldInfos: [
-        {
-          fieldName: "Twitter",
-          label: "<i class='fab fa-twitter'></i>"
-        }, {
-          fieldName: "Título",
-          label: "<i class='far fa-comment'></i>"
-        },
-      ]
-    }]
+        type: "fields",
+        fieldInfos: [
+          {
+            fieldName: "Título",
+            label: "<i class='far fa-comment'></i>"
+          },
+          {
+            fieldName: "Twitter",
+            label: "<i class='fab fa-twitter'></i>"
+          },
+        ]
+      }]
   }
 });
 
