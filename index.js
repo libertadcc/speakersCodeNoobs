@@ -39,7 +39,6 @@ var speakersRenderer = {
   type: "simple",
   symbol: hashtag
 };
-const prueba = 'https://twitter.com/conchaasensio/photo'
 
 const speakersLayer = new FeatureLayer({
   url: "https://services5.arcgis.com/hZQQbQb2B2y1Wd2F/arcgis/rest/services/SpeakersDeCodenoobsconf/FeatureServer",
